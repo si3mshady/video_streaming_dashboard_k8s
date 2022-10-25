@@ -7,14 +7,12 @@ export default function Topbar() {
     <Nav>
         <div className="nav-container">
                 <h4>Hey Arnold!</h4>
-                <h1>Welcome to the <span>Streaming Video </span> Dashboard </h1>
+                <h1>Welcome to your <span>Streaming Video </span> Dashboard!!</h1>
         </div>
 
         <div className='search'>
         <FaSearch />
             <input type="text"  placeholder='search' />
-           
-     
         </div>
     
     </Nav>
@@ -22,8 +20,6 @@ export default function Topbar() {
 
 
 }
-
-
 
 const Nav = styled.nav`
 
