@@ -37,6 +37,9 @@ height: 10vh;
 
     flex-direction: column;
     margin-left: 02.5rem;
+    h4, h1 {
+        letter-spacing: 3px;
+    }
     span {
         color: #06A2BF; 
     }
@@ -51,7 +54,7 @@ height: 10vh;
     svg {
         margin-right: -80px;
         color: black;
-        z-index: 1;
+       
         color:  #ffc107;
     } 
 
@@ -62,6 +65,7 @@ height: 10vh;
         background-color: transparent;
         border-radius: .8rem;
         padding: 1rem 8rem 1rem 1rem;
+          font-family: "Permanent Marker";
         &:focus {
         outline: none;
         font-family: "Permanent Marker";
@@ -72,6 +76,7 @@ height: 10vh;
 
     &::placeholder {
         color:  #ffc107;
+        font-family: "Permanent Marker";
   
     }
 
