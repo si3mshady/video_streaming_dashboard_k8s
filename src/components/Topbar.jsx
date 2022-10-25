@@ -11,8 +11,10 @@ export default function Topbar() {
         </div>
 
         <div className='search'>
-            <input  placeholder='search' />  
-            <FaSearch />
+        <FaSearch />
+            <input type="text"  placeholder='search' />
+           
+     
         </div>
     
     </Nav>
@@ -34,7 +36,7 @@ height: 10vh;
 .nav-container {
 
     flex-direction: column;
-    margin-left: 2.5rem;
+    margin-left: 02.5rem;
     span {
         color: #06A2BF; 
     }
@@ -43,11 +45,22 @@ height: 10vh;
 .search {
     margin-right: 1rem;
     ${'' /* transition: .3s ease-in-out; */}
+    display: flex;
+    align-items: center;
+
+    svg {
+        margin-right: -80px;
+        color: black;
+        z-index: 1;
+        color:  #ffc107;
+    } 
+
+   
     input {
         color: orange;
         border: none;
         background-color: transparent;
-
+        border-radius: .8rem;
         padding: 1rem 8rem 1rem 1rem;
         &:focus {
         outline: none;
@@ -55,7 +68,17 @@ height: 10vh;
         background-color: gold;
         color: black;
     }
+
+
+    &::placeholder {
+        color:  #ffc107;
+  
     }
+
+   
+    
+    
 }
+
 `
 
