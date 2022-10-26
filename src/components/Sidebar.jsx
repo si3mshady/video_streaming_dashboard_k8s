@@ -3,26 +3,32 @@ import { Box, IconButton, useTheme } from '@mui/system'
 import styled from 'styled-components';
 import { RiNumber1, RiNumber2, RiNumber3, RiNumber4  } from "react-icons/ri";
 
+import { AiFillPlayCircle } from "react-icons/ai";
 
 export default function Sidebar() {
+  const [hover, setHover] = React.useState(0)
   return (
     <Section >
 
     <div className='icons'>
+
+  
       <ul>
-        <li>
-          <RiNumber1 />
+      SELECT
+        <li onMouseOver={() => setHover(1)} onMouseLeave={() => {setHover(0)}}>
+         { hover == 1 ? <AiFillPlayCircle /> : <RiNumber1 /> }
         </li>
 
-        <li>
-          <RiNumber2 />
+        <li onMouseOver={() => setHover(2)} onMouseLeave={() => {setHover(0)}}>
+         { hover == 2 ? <AiFillPlayCircle /> : <RiNumber2 /> }
         </li>
 
-        <li>
-          <RiNumber3 />
+        <li onMouseOver={() => setHover(3)} onMouseLeave={() => {setHover(0)}}>
+         { hover == 3 ? <AiFillPlayCircle /> : <RiNumber3 /> }
         </li>
-        <li>
-          <RiNumber4 />
+
+         <li onMouseOver={() => setHover(4)} onMouseLeave={() => {setHover(0)}}>
+         { hover == 4 ? <AiFillPlayCircle /> : <RiNumber4 /> }
         </li>
       </ul>
     </div>
@@ -45,18 +51,21 @@ background-color: #003047 !important;
 .icons {
   margin: 40% 0;
   ul {
-    
+    padding: 20px;
+    color: orange;
+    ${'' /* background-color: orange; */}
+    border: 1px solid black;
     list-style-type: none;
     line-spacing: 4rem;
      li  {
    
-      
+      transition: ease-in-out;
       align-items: center;
       width: 60px;
       height: 60px;
       font-size: 2rem;
       display: flex;
-
+      cursor: pointer; 
       color: orange; 
      }
 
@@ -66,6 +75,11 @@ background-color: #003047 !important;
       background-color: black;
       text-align: center;
       border-radius: 50%;
+
+      :hover {
+        color: green;
+        transition: .8s ease-in-out;
+      }
       
      }
   
