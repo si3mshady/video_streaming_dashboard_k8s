@@ -34,6 +34,7 @@ height: 10vh;
     flex-direction: column;
     margin-left: 02.5rem;
     h4, h1 {
+        font-size: 1rem;
         letter-spacing: 3px;
     }
     span {
