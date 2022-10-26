@@ -26,9 +26,13 @@ const Nav = styled.nav`
 display: flex;
 justify-content: space-between;
 background-color: #003047 !important;
+border-bottom: 2px solid orange;
 color: orange;
 align-items: center;
 height: 10vh;
+position: fixed;
+width: 100vw;
+${'' /* z-index: 3; */}
 .nav-container {
 
     flex-direction: column;

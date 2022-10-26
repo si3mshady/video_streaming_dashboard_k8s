@@ -3,10 +3,10 @@ import './App.css';
 
 
 import { useState } from 'react';
-import Topbar from "./components/Topbar"
+
 import Sidebar from "./components/Sidebar"
 import styled from 'styled-components';
- 
+import Dashboard from './components/Dashboard';
 
 function App() {
 
@@ -15,8 +15,7 @@ function App() {
    
 
         <Div className='App'> 
-
-        <Topbar />
+        <Dashboard />
         <Sidebar />
         
          </Div>
@@ -27,4 +26,5 @@ function App() {
 
 export default App;
 
-const Div = styled.div``
+const Div = styled.div`
+`

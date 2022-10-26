@@ -75,10 +75,13 @@ export default function Sidebar() {
 
 const Section = styled.section`
 border-top: 1px solid black;
+border-right: 1px solid orange;
 transition: 0.5s;
-width: 15vw;
+width: 14.8vw;
 height: 100vh;
+z-index: 20;
 position: fixed;
+top: 78px;
 
 left: 0;
 transition: all .4s;
@@ -93,7 +96,7 @@ display: flex;
 flex-direction: column;
 background-color: #003047 !important;
 .toggle {
-  margin-left: 180px;
+  margin-left: 170px;
   color: #06A2BF;
   font-size: 1.9rem;
 }
