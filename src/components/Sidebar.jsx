@@ -4,11 +4,19 @@ import styled from 'styled-components';
 import { RiNumber1, RiNumber2, RiNumber3, RiNumber4  } from "react-icons/ri";
 
 import { AiFillPlayCircle } from "react-icons/ai";
+import { BsToggleOn,BsToggleOff } from "react-icons/bs";
 
 export default function Sidebar() {
   const [hover, setHover] = React.useState(0)
+  const [open, setOpen] = React.useState(false)
+
   return (
-    <Section >
+    <Section open={open} >
+  <div >
+
+  <div className='toggle' onClick={() => {setOpen((prev) => !prev)}}>
+      {open ? <BsToggleOff/> : <BsToggleOn/>}
+    </div>
 
     <div className='icons'>
 
@@ -32,6 +40,9 @@ export default function Sidebar() {
         </li>
       </ul>
     </div>
+
+  </div>
+   
       
     </Section>
   )
@@ -43,14 +54,29 @@ transition: 0.5s;
 width: 15vw;
 height: 100vh;
 position: fixed;
+
+${'' /* top: 0;
+z-index: -1; */}
 left: 0;
+transition: all .4s;
+${'' /* transform: translateX(-100%); */}
+
+transform: ${(props) => (props.open ? "translateX(-79%)": "translateX(0%)") };
+opacity: ${(props) => (props.open ? .4: 1) };
+
 background-color: white;
 display: flex;
-justify-content: center;
+${'' /* justify-content: center; */}
+flex-direction: column;
 background-color: #003047 !important;
+.toggle {
+  margin-left: 180px;
+}
 .icons {
-  margin: 40% 0;
+
+  margin: auto;
   ul {
+    width:100%;
     padding: 20px;
     color: orange;
     ${'' /* background-color: orange; */}
@@ -83,7 +109,17 @@ background-color: #003047 !important;
       
      }
   
+  
   }
 }
 
+.open {
+  transform: translateX(0%);
+  transition: all .4s;
+}
+
+.close {
+  transition: all .4s;
+  transform: translateX(-100%);
+}
 `
