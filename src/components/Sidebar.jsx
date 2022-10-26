@@ -63,7 +63,7 @@ ${'' /* transform: translateX(-100%); */}
 
 transform: ${(props) => (props.open ? "translateX(-79%)": "translateX(0%)") };
 opacity: ${(props) => (props.open ? .4: 1) };
-
+transition: all 2.9s;
 background-color: white;
 display: flex;
 ${'' /* justify-content: center; */}
@@ -76,6 +76,7 @@ background-color: #003047 !important;
 
   margin: auto;
   ul {
+    margin: 0 0 0 22px;
     width:100%;
     padding: 20px;
     color: orange;
