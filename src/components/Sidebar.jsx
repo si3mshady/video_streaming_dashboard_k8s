@@ -85,7 +85,7 @@ transition: all .4s;
 
 
 transform: ${(props) => (props.open ? "translateX(-79%)": "translateX(0%)") };
-opacity: ${(props) => (props.open ? .4: 1) };
+opacity: ${(props) => (props.open ? .04: 1) };
 transition: all 2.9s;
 background-color: white;
 display: flex;
