@@ -49,6 +49,7 @@ const Div = styled.div`
     height: 50%;
     align-items: center;
     padding: 100px;
+    margin-top: 4rem;
     gap: 3rem;
     ${'' /* background-color: white; */}
      canvas {
