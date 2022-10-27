@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Topbar from './Topbar'
 import Media from './Media'
-
+import {App} from './Donut'
 export default function Dashboard() {
   return (
     <>
@@ -12,10 +12,13 @@ export default function Dashboard() {
     <div className='dashboard_container'>
         <div className='dashboard_container__top'>
                 <Media />
+                <App />
     
         </div>
 
         <div className='dashboard_container__bottom'>
+                <Media />
+                <Media />
        
         </div>
     </div>
@@ -56,7 +59,7 @@ background-color: #003047 !important;
 
     &__bottom {
         width: 100%;
-        background-color:  red;
+     
         height: 50%;
         margin: 0 30px;
         display: grid;

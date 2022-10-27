@@ -1,24 +1,27 @@
 import React from 'react'
 import styled from 'styled-components'
+
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import { Doughnut } from 'react-chartjs-2';
+
 export default function Media() {
 
   
   return (
    <Div >
    <div className='video'>
-        {/* <iframe width="200" height="200" src="https://www.youtube.com/embed/9CnZVfsyN2I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
+     {/* #VideoContent */}
 
    </div>
    <div className='video'>
-        {/* <iframe width="200" height="200" src="https://www.youtube.com/embed/9CnZVfsyN2I" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
+       {/* #VideoContent */}
+   </div>
+   <div className='video'>
+       {/* #VideoContent */}
 
    </div>
    <div className='video'>
-        {/* <iframe width="200" height="200" src="https://www.youtube.com/embed/9CnZVfsyN2I" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
-
-   </div>
-   <div className='video'>
-        {/* <iframe width="200" height="200" src="https://www.youtube.com/embed/9CnZVfsyN2I" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
+         {/* #VideoContent */}
 
    </div>
    </Div>
@@ -32,10 +35,13 @@ display: grid;
 grid-template-columns: repeat(2,1fr);
 margin-left: 200px;
 margin-top: 4rem;
-gap: .1rem;
+padding: 1rem 2rem 3rem 2rem;
+gap: 1rem;
+
 .video {
+    align-self: start;
     padding: 20px;
-    width: 100px;
+    width: 200px;
     height: 100px;
     border-radius: 1px solid orange;
     background-color: orange;
