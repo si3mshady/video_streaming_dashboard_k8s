@@ -46,15 +46,19 @@ const Div = styled.div`
     ${'' /* display: grid; */}
     display: flex;
     width: 30%;
-    height: 10%;
+    height: 50%;
     align-items: center;
-    padding: 90px;
+    padding: 100px;
     gap: 3rem;
     ${'' /* background-color: white; */}
-     * {
+     canvas {
+        ${'' /* background-color:white; */}
+        display: flex;
+        justify-content: center;
+   
 
-        width:100%;
-        height: 100%;
+        width:50%;
+        height: 50%;
     }
 `
 
