@@ -81,7 +81,7 @@ width: 14.8vw;
 height: 100vh;
 z-index: 20;
 position: fixed;
-top: 78px;
+top: 76px;
 
 left: 0;
 transition: all .4s;

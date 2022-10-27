@@ -9,7 +9,14 @@ export default function Dashboard() {
     <Div>
   
     <div className='dashboard_container'>
-        <h2>Hello</h2>
+        <div className='dashboard_container__top'>
+
+
+        </div>
+
+        <div className='dashboard_container__bottom'>
+
+        </div>
     </div>
     </Div>
     </>
@@ -19,28 +26,37 @@ export default function Dashboard() {
 
 const Div = styled.div`
 display: flex;
-justify-content: center;
+${'' /* justify-content: center; */}
 width: 100vw;
 height: 100vh;
+
 background-color: #003047 !important;
 .dashboard_container {
     display: flex;
+    flex-direction: column;
     width: 100%;
     background-color: orange;
+    padding: 0 34px 0 0;
     ${'' /* margin: auto; */}
     ${'' /* margin-left: 15vw;  OVERFLOW hidden is needed to hide the body overflow behind the sidebar= but still allow it to be seen when 
     sidebar collapses */}
     overflow: hidden;  
-    padding: 2rem;
-  
-    
-    ${'' /* position: relative; */}
-    ${'' /* left: 15vw; */}
-    h2 {
-        align-items: center;
-        margin: auto;
+    ${'' /* padding: 2rem; */}
+    &__top {
+        width: 100%;
+        background-color:  blue;
+        height: 50%;
+        margin: 0 30px;
+        display: grid;
     }
 
+    &__bottom {
+        width: 100%;
+        background-color:  red;
+        height: 50%;
+        margin: 0 30px;
+        display: grid;
+    }
 }
 
 `
