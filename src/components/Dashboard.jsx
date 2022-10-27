@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Topbar from './Topbar'
+import Media from './Media'
 
 export default function Dashboard() {
   return (
@@ -10,12 +11,12 @@ export default function Dashboard() {
   
     <div className='dashboard_container'>
         <div className='dashboard_container__top'>
-
-
+                <Media />
+    
         </div>
 
         <div className='dashboard_container__bottom'>
-
+       
         </div>
     </div>
     </Div>
@@ -35,7 +36,7 @@ background-color: #003047 !important;
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-color: orange;
+
     padding: 0 34px 0 0;
     ${'' /* margin: auto; */}
     ${'' /* margin-left: 15vw;  OVERFLOW hidden is needed to hide the body overflow behind the sidebar= but still allow it to be seen when 
@@ -44,10 +45,13 @@ background-color: #003047 !important;
     ${'' /* padding: 2rem; */}
     &__top {
         width: 100%;
-        background-color:  blue;
+        justify-content: center;
+        align-items: center;
+        ${'' /* background-color:  blue; */}
         height: 50%;
         margin: 0 30px;
         display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     &__bottom {
@@ -56,6 +60,7 @@ background-color: #003047 !important;
         height: 50%;
         margin: 0 30px;
         display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
