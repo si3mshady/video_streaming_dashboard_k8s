@@ -5,7 +5,7 @@ import styled from 'styled-components'
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 export const data = {
-//   labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+  labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
   datasets: [
     {
       label: '# of Votes',
@@ -45,15 +45,17 @@ export function App() {
 const Div = styled.div`
     ${'' /* display: grid; */}
     display: flex;
-    width: 30%;
+    width: 36%;
     height: 50%;
     align-items: center;
     padding: 100px;
-    margin-top: 4rem;
+    margin-top: 4.9rem;
     gap: 3rem;
     ${'' /* background-color: white; */}
      canvas {
         ${'' /* background-color:white; */}
+        width: 100px;
+        height: 100px;
         display: flex;
         justify-content: center;
    
