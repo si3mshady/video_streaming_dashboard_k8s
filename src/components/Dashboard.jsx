@@ -48,13 +48,13 @@ background-color: #003047 !important;
     ${'' /* padding: 2rem; */}
     &__top {
         width: 100%;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         ${'' /* background-color:  blue; */}
         height: 50%;
         margin: 0 30px;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        ${'' /* grid-template-columns: repeat(2, 1fr); */}
     }
 
     &__bottom {
