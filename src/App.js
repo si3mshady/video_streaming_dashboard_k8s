@@ -1,6 +1,7 @@
 
 import './App.css';
 
+import {Link, Router,Route, Routes} from 'react-router-dom'
 
 import { useState } from 'react';
 
@@ -15,9 +16,18 @@ function App() {
    
 
         <Div className='App'> 
-        <Dashboard />
+  
         <Sidebar />
-        
+
+
+            
+        <Routes >
+                <Route path="/" element={<Dashboard />} />
+              
+       </Routes>
+
+
+
          </Div>
 
    
