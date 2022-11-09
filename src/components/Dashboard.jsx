@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Topbar from './Topbar'
 import Media from './Media'
 import {App} from './Donut'
+
 export default function Dashboard() {
   return (
     <>
@@ -17,8 +18,8 @@ export default function Dashboard() {
         </div>
 
         <div className='dashboard_container__bottom'>
-                <Media />
-                <Media />
+        <App />
+        <App />
        
         </div>
     </div>
@@ -59,11 +60,21 @@ background-color: #003047 !important;
 
     &__bottom {
         width: 100%;
-     
+        justify-content: space-between;
+        align-items: center;
         height: 50%;
         margin: 0 30px;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        ${'' /* grid-template-columns: repeat(2, 1fr); */}
+
+       > * :first-of-type() {
+            background-color: white;
+        }
+
+        > * :nth-of-type(1) {
+            ${'' /* background-color: orange; */}
+            margin-left: 5rem;
+        }
     }
 }
 
