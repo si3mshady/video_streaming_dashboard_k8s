@@ -19,7 +19,7 @@ export default function Video1() {
 const Section = styled.section`
 width: 100vw;
 height: 100vh;
-background-color: white;
+background-color: blue;
 .vid-container {
     height: 100%;
    

@@ -22,7 +22,7 @@ export default function Video2() {
 const Section = styled.section`
 width: 100vw;
 height: 100vh;
-background-color: white;
+background-color: tomato;
 .vid-container {
     height: 100%;
    
