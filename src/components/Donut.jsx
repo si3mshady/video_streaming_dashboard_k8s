@@ -11,7 +11,7 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 export function App() {
   const value = React.useContext(ClickContext)
-  const {videoCount1, videoCount2, videoCount3 , videoCount4,  setVideoCount1, setVideoCount2,setVideoCount3, setVideoCount4} = value 
+  const {videoCount1, videoCount2, videoCount3 , videoCount4} = value 
   
    const data = {
     labels: ['Video1', 'Video2', 'Video3', 'Video4'],
