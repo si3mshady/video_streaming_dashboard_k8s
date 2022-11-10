@@ -2,6 +2,7 @@ import React from 'react'
 import { Box, IconButton, useTheme } from '@mui/system'
 import styled from 'styled-components';
 import { RiNumber1, RiNumber2, RiNumber3, RiNumber4 , RiMovieFill} from "react-icons/ri";
+import {Link, Router,Route, Routes} from 'react-router-dom'
 
 import { AiFillPlayCircle } from "react-icons/ai";
 import { BsToggleOn,BsToggleOff } from "react-icons/bs";
@@ -20,48 +21,48 @@ export default function Sidebar() {
 
     <div className='icons'>
           <div className="icons__header">
-          <RiMovieFill /> <span>SELECT</span>
+          <RiMovieFill /> <Link to={"/"} className='select_link'> <span>SELECT</span> </Link> 
           </div>
     
       <ul>
    
         <li onMouseOver={() => setHover(1)} onMouseLeave={() => {setHover(0)}}>
-        <a>
+        <Link className='link'   to={'/v1'}>
 
           <span> Video </span> { hover == 1 ? <AiFillPlayCircle /> : <RiNumber1 /> }
 
 
-        </a>
+        </Link>
 
         </li>
 
         <li onMouseOver={() => setHover(2)} onMouseLeave={() => {setHover(0)}}>
 
-        <a>
+        <Link className='link' to={'/v2'}>
 
             <span> Video </span> { hover == 2 ? <AiFillPlayCircle /> : <RiNumber2 /> }
 
 
-        </a>
+        </Link>
        
         </li>
 
         <li onMouseOver={() => setHover(3)} onMouseLeave={() => {setHover(0)}}>
-        <a>
+        <Link className='link'  to={'/v3'}>
 
           <span> Video </span> { hover == 3 ? <AiFillPlayCircle /> : <RiNumber3 /> }
 
 
-          </a>
+          </Link>
         </li>
 
          <li onMouseOver={() => setHover(4)} onMouseLeave={() => {setHover(0)}}>
-         <a>
+         <Link className='link'  to={'/v4'} >
 
           <span> Video </span> { hover == 4 ? <AiFillPlayCircle /> : <RiNumber4/> }
 
 
-        </a>
+        </Link>
         </li>
       </ul>
     </div>
@@ -102,6 +103,8 @@ background-color: #003047 !important;
 }
 .icons {
 
+  
+
   &__header {
    display: flex;
    align-items: center;
@@ -110,6 +113,10 @@ background-color: #003047 !important;
    color: orange;
    gap: 1rem;
    font-size: 2rem;
+
+   .select_link {
+    text-decoration: none;
+   }
   }
   margin: auto;
   ul {
@@ -144,10 +151,13 @@ background-color: #003047 !important;
       
      }
 
-     li > a {
+     li > .link {
       display: flex;
       align-items: center;
       letter-spacing: 12px;
+      cursor: pointer; 
+      color: orange; 
+      text-decoration: none;
      }
 
      li:nth-child(n) {
@@ -161,6 +171,11 @@ background-color: #003047 !important;
       }
       
      }
+
+
+
+
+  
   
   
   }
