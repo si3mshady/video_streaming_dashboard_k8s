@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import Topbar from './Topbar'
-import Video from "/Users/elliottarnold/streaming_dash/streaming-dash/src/components/assets/4.mp4" 
+import Video from "/Users/elliottarnold/streaming_dash/streaming-dash/src/components/assets/3.mp4" 
 
 export default function Video3() {
   return (
@@ -27,9 +27,9 @@ export default function Video3() {
 const Section = styled.section`
 width: 100vw;
 height: 100vh;
-background-color: green;
+background-color: #003047 !important;
 .vid-container {
     height: 100%;
-   
+    background-color: #003047 !important;
 }
 `

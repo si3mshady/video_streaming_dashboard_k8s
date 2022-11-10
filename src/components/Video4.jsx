@@ -28,7 +28,7 @@ export default function Video4() {
 const Section = styled.section`
 width: 100vw;
 height: 100vh;
-background-color: violet;
+background-color: #003047 !important;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -36,8 +36,8 @@ margin: auto;
 .vid-container {
    
     width: 90%;
-    height: 500px;
-    background-color: red;
+    height: 100%;
+    background-color: #003047 !important;
   
 
 

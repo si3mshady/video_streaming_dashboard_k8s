@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import Topbar from './Topbar'
-import Video from "/Users/elliottarnold/streaming_dash/streaming-dash/src/components/assets/4.mp4" 
+import Video from "/Users/elliottarnold/streaming_dash/streaming-dash/src/components/assets/1.mp4" 
 
 export default function Video1() {
   return (
@@ -30,6 +30,6 @@ height: 100vh;
 background-color: blue;
 .vid-container {
     height: 100%;
-   
+    background-color: #003047 !important;
 }
 `
