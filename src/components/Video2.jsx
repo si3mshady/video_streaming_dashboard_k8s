@@ -11,7 +11,7 @@ export default function Video2() {
     
     <Section >
     <div className='vid-container'>
-         <video controls height="100%" autoPlay  width="100%">
+         <video controls height="100%" autoPlay muted width="100%">
 
         <source src={Video} type="video/mp4"/>
 
