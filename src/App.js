@@ -23,6 +23,10 @@ function App() {
             
         <Routes >
                 <Route path="/" element={<Dashboard />} />
+                {/* <Route path="/" element={<video1 />} /> */}
+                {/* <Route path="/" element={<video2 />} /> */}
+                {/* <Route path="/" element={<video3 />} /> */}
+                {/* <Route path="/" element={<video4 />} /> */}
               
        </Routes>
 
@@ -37,4 +41,4 @@ function App() {
 export default App;
 
 const Div = styled.div`
-`
+` 
