@@ -17,7 +17,7 @@ export function App() {
     labels: ['Video1', 'Video2', 'Video3', 'Video4'],
     datasets: [
       {
-        label: '# of Votes',
+        label: '# of Views',
         data: [videoCount1, videoCount2, videoCount3, videoCount4],
         backgroundColor: [
           'rgba(255, 99, 132, 0.2)',

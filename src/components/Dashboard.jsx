@@ -15,7 +15,6 @@ export default function Dashboard() {
   
     <div className='dashboard_container'>
         <div className='dashboard_container__top'>
-                {/* <Media /> */}
                 <MediaRefactor />
                 <Line_ />
     

@@ -112,8 +112,8 @@ export function Line_() {
   return ( 
   
   <Div >
-  <Bar options={options}   width={800}
-  height={400} data={data} />
+  <Bar options={options}   width={500}
+  height={500} data={data} />
 
   </Div>
 
@@ -130,11 +130,11 @@ export function Line_() {
 const Div = styled.div`
     ${'' /* display: grid; */}
     display: flex;
-    width: 36%;
+    width: 50%;
     height: 50%;
     align-items: center;
     padding: 100px;
-    margin-top: 4.9rem;
+    margin-top: 7.9rem;
     gap: 3rem;
     ${'' /* background-color: white; */}
      canvas {
