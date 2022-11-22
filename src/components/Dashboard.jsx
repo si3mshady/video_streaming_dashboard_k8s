@@ -4,7 +4,10 @@ import Topbar from './Topbar'
 import Media from './Media'
 import {App} from './Donut'
 import MediaRefactor from './Media_refactor'
+import {Line_} from "./Line"
 export default function Dashboard() {
+
+ 
   return (
     <>
   <Topbar />
@@ -14,7 +17,7 @@ export default function Dashboard() {
         <div className='dashboard_container__top'>
                 {/* <Media /> */}
                 <MediaRefactor />
-                <App />
+                <Line_ />
     
         </div>
 
@@ -80,3 +83,6 @@ background-color: #003047 !important;
 }
 
 `
+
+
+// https://github.com/reactchartjs/react-chartjs-2/issues/1037

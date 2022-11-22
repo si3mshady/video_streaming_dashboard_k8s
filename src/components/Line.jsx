@@ -1,31 +1,151 @@
-// import React from "react";
+// components/LineChart.js
+import React from "react";
+import { Line } from "react-chartjs-2";
+import { useState, useRef } from 'react';
+import 'chart.js/auto';
+import {ClickContext} from "../App"
+import styled from 'styled-components'
+import {
+    Chart as ChartJS,
+    CategoryScale,
+    LinearScale,
+    BarElement,
+    Title,
+    Tooltip,
+    Legend,
+  } from 'chart.js';
 
 
-// import {Line}  from "react-chartjs-2";
+  import { Bar } from 'react-chartjs-2';
 
-// const data = {
-//   labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
-//   datasets: [
-//     {
-//       label: "First dataset",
-//       data: [33, 53, 85, 41, 44, 65],
-//       fill: true,
-//       backgroundColor: "rgba(75,192,192,0.2)",
-//       borderColor: "rgba(75,192,192,1)"
-//     },
-//     {
-//       label: "Second dataset",
-//       data: [33, 25, 35, 51, 54, 76],
-//       fill: false,
-//       borderColor: "#742774"
-//     }
-//   ]
-// };
+  
+  ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    BarElement,
+    Title,
+    Tooltip,
+    Legend
+  );
+  
+// function LineChart({ chartData }) {
 
-// export default function LineChart() {
+
+
+
+//     const ref = useRef();
+//     const data = {
+//         labels: ['labels'],
+//         datasets: [{
+//           label: 'My First Dataset',
+//           data: [65, 59, 80, 81, 56, 55, 40],
+//           fill: false,
+//           borderColor: 'rgb(75, 192, 192)',
+//           tension: 0.1
+//         }]
+//       };
 //   return (
-//     <div className="App">
-//       <Line data={data} />
+//     <div className="chart-container">
+//       <h2 style={{ textAlign: "center" }}>Line Chart</h2>
+//       <Line
+//        ref={ref}
+//         data={data}
+//         options={{
+//           plugins: {
+//             title: {
+//               display: true,
+//               text: "Users Gained between 2016-2020"
+//             },
+//             legend: {
+//               display: false
+//             }
+//           }
+//         }}
+//       />
 //     </div>
 //   );
 // }
+// export default LineChart;
+
+
+
+
+
+export function Line_() {
+
+    const value = React.useContext(ClickContext)
+    const {videoCount1, videoCount2, videoCount3 , videoCount4} = value 
+
+
+    const labels = ['Videp Plays'];
+
+     const data = {
+      labels,
+      datasets: [
+        {
+          label: 'Dataset 1',
+          data: [videoCount1],
+          backgroundColor: 'rgba(255, 99, 132, 0.5)',
+        },
+        {
+          label: 'Dataset 2',
+          data: [videoCount2],
+          backgroundColor: 'rgba(53, 162, 235, 0.5)',
+        },{
+            label: 'Dataset 3',
+            data: [videoCount3],
+            backgroundColor: 'rgba(53, 162, 235, 0.5)',
+          },{
+            label: 'Dataset 4',
+            data: [videoCount4],
+            backgroundColor: 'rgba(53, 162, 235, 0.5)',
+          }
+      ],
+    };
+
+     const options = {
+        responsive: true,
+       
+     
+      };
+
+  return ( 
+  
+  <Div >
+  <Bar options={options}   width={800}
+  height={400} data={data} />
+
+  </Div>
+
+  
+  
+  
+  )
+  
+  
+  ;
+}
+
+
+const Div = styled.div`
+    ${'' /* display: grid; */}
+    display: flex;
+    width: 36%;
+    height: 50%;
+    align-items: center;
+    padding: 100px;
+    margin-top: 4.9rem;
+    gap: 3rem;
+    ${'' /* background-color: white; */}
+     canvas {
+        ${'' /* background-color:white; */}
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+   
+
+        width:50%;
+        height: 50%;
+    }
+`

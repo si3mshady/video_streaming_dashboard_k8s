@@ -17,7 +17,7 @@ const video_imports = [Video1, Video2, Video3, Video4]
 
 const VID = ({setter, getter, content}) => (
 <div className='video'>
-     <video src={content} onClick={() => {getter(setter)}} onPlay={() => {setter( getter + 1)}}   autoPlay  controls height="100%"  muted  width="100%">
+     <video  onPlay={() => {setter( getter + 1 )}}     controls height="100%"  muted  width="100%">
 
     <source src={content} type="video/mp4"/>
 
