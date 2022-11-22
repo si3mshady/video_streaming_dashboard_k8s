@@ -83,20 +83,20 @@ export function Line_() {
       labels,
       datasets: [
         {
-          label: 'Dataset 1',
+          label: 'Video 1',
           data: [videoCount1],
           backgroundColor: 'rgba(255, 99, 132, 0.5)',
         },
         {
-          label: 'Dataset 2',
+          label: 'Video 2',
           data: [videoCount2],
-          backgroundColor: 'rgba(53, 162, 235, 0.5)',
+          backgroundColor: 'rgba(13, 162, 35, 0.5)',
         },{
-            label: 'Dataset 3',
+            label: 'Video 3',
             data: [videoCount3],
-            backgroundColor: 'rgba(53, 162, 235, 0.5)',
+            backgroundColor: 'rgba(53, 12, 25, 0.5)',
           },{
-            label: 'Dataset 4',
+            label: 'Video 4',
             data: [videoCount4],
             backgroundColor: 'rgba(53, 162, 235, 0.5)',
           }
