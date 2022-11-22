@@ -9,7 +9,7 @@ import Video3 from "/Users/elliottarnold/streaming_dash/streaming-dash/src/compo
 import Video4 from "/Users/elliottarnold/streaming_dash/streaming-dash/src/components/assets/4.mp4" 
 import {ClickContext} from "../App"
 
-
+import VideoPlayer from './VidPlayer';
 
 export default function Media() {
 
