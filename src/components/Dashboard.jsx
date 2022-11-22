@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Topbar from './Topbar'
 import Media from './Media'
 import {App} from './Donut'
-
+import MediaRefactor from './Media_refactor'
 export default function Dashboard() {
   return (
     <>
@@ -12,7 +12,8 @@ export default function Dashboard() {
   
     <div className='dashboard_container'>
         <div className='dashboard_container__top'>
-                <Media />
+                {/* <Media /> */}
+                <MediaRefactor />
                 <App />
     
         </div>

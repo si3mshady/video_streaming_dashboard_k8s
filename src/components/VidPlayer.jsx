@@ -3,17 +3,17 @@ import styled from 'styled-components';
 import Topbar from './Topbar'
 
 
-export default function VideoPlayer({video_source}) {
+export default function VideoPlayer({content, count, setCount }) {
   return (
     <>
-    <Topbar />
+    {/* <Topbar />   */}
 
     
     <Section >
-    <div className='vid-container'>
+    <div className='video vid-container'>
          <video controls height="100%" autoPlay muted  width="100%">
 
-        <source src={video_source} type="video/mp4"/>
+        <source src={content} type="video/mp4"/>
 
         </video>
     </div>
@@ -39,5 +39,24 @@ margin: auto;
     background-color: #003047 !important;
 
    
+}
+
+
+
+.video {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 290px;
+  height: 200px;
+  ${'' /* border-radius: 1px solid orange; */}
+  background-color: orange;
+
+   video {
+    height: 80% !important;
+    width: 80% !important;
+  }
+  
 }
 `

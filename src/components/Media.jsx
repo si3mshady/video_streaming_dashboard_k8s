@@ -11,6 +11,18 @@ import {ClickContext} from "../App"
 
 import VideoPlayer from './VidPlayer';
 
+const video_imports = [Video1, Video2, Video3, Video4] 
+
+const VID = (setter, getter) =>  (
+<div className='video'>
+     <video onPlay={() => {setter( getter + 1)}}    controls height="100%"  muted  width="100%">
+
+    <source src={Video1} type="video/mp4"/>
+
+    </video>
+    
+</div> )
+
 export default function Media() {
 
   
