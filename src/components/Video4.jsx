@@ -19,7 +19,6 @@ export default function Video4() {
     </div>
     </Section>
    
-
  </>
   )
 }
@@ -38,10 +37,7 @@ margin: auto;
     width: 90%;
     height: 100%;
     background-color: #003047 !important;
-  
 
-
-   
    
 }
 `
