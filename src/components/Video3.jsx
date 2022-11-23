@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import Topbar from './Topbar'
-import Video from "/Users/elliottarnold/streaming_dash/streaming-dash/src/components/assets/3.mp4" 
+// import Video from "/Users/elliottarnold/streaming_dash/streaming-dash/src/components/assets/3.mp4" 
 
 export default function Video3() {
   return (
@@ -12,7 +12,7 @@ export default function Video3() {
     <div className='vid-container'>
          <video controls height="100%" autoPlay muted width="100%">
 
-        <source src={Video} type="video/mp4"/>
+         <source src={"http://localhost:4000/video/2/play"} type="video/mp4"/>
 
         </video>
     </div>

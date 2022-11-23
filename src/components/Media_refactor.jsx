@@ -3,23 +3,23 @@ import styled from 'styled-components'
 import Donut from '../components/Donut'
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
-import Video1 from "/Users/elliottarnold/streaming_dash/streaming-dash/src/components/assets/1.mp4" 
-import Video2 from "/Users/elliottarnold/streaming_dash/streaming-dash/src/components/assets/2.mp4" 
-import Video3 from "/Users/elliottarnold/streaming_dash/streaming-dash/src/components/assets/3.mp4" 
-import Video4 from "/Users/elliottarnold/streaming_dash/streaming-dash/src/components/assets/4.mp4" 
+// import Video1 from "/Users/elliottarnold/streaming_dash/streaming-dash/src/components/assets/1.mp4" 
+// import Video2 from "/Users/elliottarnold/streaming_dash/streaming-dash/src/components/assets/2.mp4" 
+// import Video3 from "/Users/elliottarnold/streaming_dash/streaming-dash/src/components/assets/3.mp4" 
+// import Video4 from "/Users/elliottarnold/streaming_dash/streaming-dash/src/components/assets/4.mp4" 
 
 
 import {ClickContext} from "../App"
 
+// axios
 
+// const video_imports = [Video1, Video2, Video3, Video4] 
 
-const video_imports = [Video1, Video2, Video3, Video4] 
-
-const VID = ({setter, getter, content}) => (
+const VID = ({setter, getter, content, id }) => (
 <div className='video'>
      <video  onPlay={() => {setter( getter + 1 )}}     controls height="100%"  muted  width="100%">
-
-    <source src={content} type="video/mp4"/>
+    {/* <source src={content} type="video/mp4"/> */}
+    <source src={`http://localhost:4000/video/${id}/play`} type="video/mp4"/>
 
     </video>
     
@@ -36,11 +36,13 @@ export default function Media() {
   return (
    <Div >
 
-  { video_imports.map((_,index) => (
+  { countList.map((_,index) => (
     <VID key={index}
         getter={countList[index]} 
         setter={setList[index]}
-        content={video_imports[index]} />))  }
+        id={index}
+        // content={video_imports[index]} 
+        />))  }
    </Div>
     
   )
