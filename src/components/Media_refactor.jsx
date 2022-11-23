@@ -11,7 +11,7 @@ import Video4 from "/Users/elliottarnold/streaming_dash/streaming-dash/src/compo
 
 import {ClickContext} from "../App"
 
-import VideoPlayer from './VidPlayer';
+
 
 const video_imports = [Video1, Video2, Video3, Video4] 
 
@@ -28,19 +28,19 @@ const VID = ({setter, getter, content}) => (
 export default function Media() {
 
   
-  const value = React.useContext(ClickContext)
-  const {videoCount1, videoCount2, videoCount3 , videoCount4,  setVideoCount1, setVideoCount2,setVideoCount3, setVideoCount4} = value 
-  const countList = [videoCount1, videoCount2, videoCount3 , videoCount4]
+ const value = React.useContext(ClickContext)
+ const {videoCount1, videoCount2, videoCount3 , videoCount4,  setVideoCount1, setVideoCount2,setVideoCount3, setVideoCount4} = value 
+ const countList = [videoCount1, videoCount2, videoCount3 , videoCount4]
  const setList=  [setVideoCount1, setVideoCount2,setVideoCount3, setVideoCount4] 
   
   return (
    <Div >
 
-  { video_imports.map((src,index) => (<VID key={index} getter={countList[index]} setter={setList[index]} content={video_imports[index]} />))  }
-
-
-
-
+  { video_imports.map((_,index) => (
+    <VID key={index}
+        getter={countList[index]} 
+        setter={setList[index]}
+        content={video_imports[index]} />))  }
    </Div>
     
   )

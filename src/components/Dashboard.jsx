@@ -4,6 +4,7 @@ import Topbar from './Topbar'
 import Media from './Media'
 import {App} from './Donut'
 import MediaRefactor from './Media_refactor'
+import { PieChart } from './Pie'
 import {Line_} from "./Line"
 export default function Dashboard() {
 
@@ -21,7 +22,7 @@ export default function Dashboard() {
         </div>
 
         <div className='dashboard_container__bottom'>
-        <App />
+        <PieChart />
         <App />
        
         </div>
