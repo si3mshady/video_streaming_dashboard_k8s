@@ -68,5 +68,11 @@ const Div = styled.div`
         width:50%;
         height: 50%;
     }
+
+    @media (max-width: 1000px) {
+ 
+ display: none;
+ }
+
 `
 

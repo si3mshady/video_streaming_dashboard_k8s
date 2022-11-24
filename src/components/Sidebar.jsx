@@ -182,4 +182,10 @@ background-color: #003047 !important;
 }
 
 
+
+@media (max-width: 1000px) {
+ 
+  display: none;
+  }
+
 `

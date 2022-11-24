@@ -85,4 +85,10 @@ const Div = styled.div`
         width:0%;
         height: 50%;
     }
+
+    @media (max-width: 1000px) {
+ 
+ display: none;
+ }
+
 `

@@ -53,7 +53,7 @@ const Div = styled.div`
 display: grid;
 grid-template-columns: repeat(2,1fr);
 margin-left: 200px;
-margin-top: 14rem;
+margin-top: 14rem; 
 padding: 1rem 2rem 3rem 2rem;
 gap: 1rem;
 ${'' /* width: 500px; */}
@@ -74,5 +74,18 @@ ${'' /* width: 500px; */}
     }
     
 }
+
+
+@media (max-width: 1000px) {
+margin: auto;
+  display: grid;
+grid-template-columns: repeat(1,1fr);
+.video {
+  margin: auto;
+  height: 50vh !important;
+      width: 100vw !important;
+}
+  }
+
 
 `

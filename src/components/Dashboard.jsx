@@ -17,7 +17,7 @@ export default function Dashboard() {
     <div className='dashboard_container'>
         <div className='dashboard_container__top'>
                 <MediaRefactor />
-                <Line_ />
+                <Line_ className="display_" />
     
         </div>
 
@@ -80,7 +80,43 @@ background-color: #003047 !important;
             margin-left: 5rem;
         }
     }
+
+
+
+
+
+
 }
+
+
+@media (max-width: 1000px) {
+  ${'' /* background-color: orange !important;
+  display: grid;
+  grid-template-columns: 100% 1fr; */}
+ 
+  ${'' /* display: grid;
+  height: 100vh; */}
+  ${'' /* width: 100%; */}
+display: flex;
+flex-direction: column;
+
+  .dashboard_container  {
+   
+  display: grid;
+  margin-top: 200px;
+  height: 100vh;
+  overflow-y: scroll;
+
+
+
+
+
+  }
+
+  
+  }
+
+
 
 `
 
