@@ -27,7 +27,7 @@ mongodb.MongoClient.connect(url, function (error, client) {
     const  files = ["0.mp4","1.mp4","2.mp4","4.mp4"]
 
     files.forEach((path) => {
-
+        console.log(`creating stream ${path}`)
         fs.createReadStream(path).
         pipe(bucket.openUploadStream(path, {
             chunkSizeBytes: 1048576,
