@@ -87,19 +87,6 @@ app.get('/video/:id/play', (req,res) => {
             console.log('There is a video')
           }
 
-
-
-
-
-
-
-
-
-
-
-     
-          // const videoPath = __dirname +  "/ThirdChild.mp4"
-          // const videoPath = __dirname + "/assets/ryu_stream_sample.mp4"
           const videoPath = `assets/${req.params.id}.mp4`
           console.log(videoPath)
       
