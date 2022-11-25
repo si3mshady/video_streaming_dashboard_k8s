@@ -10,7 +10,7 @@ import {ClickContext} from "../App"
 const VID = ({setter, getter, content, id }) => (
 <div className='video'>
      <video  onPlay={() => {setter( getter + 1 )}}     controls height="100%"  muted  width="100%">
-    <source src={`http://localhost:4000/video/${id}/play`} type="video/mp4"/>
+    <source src={`http://localhost:8080/video/${id}/play`} type="video/mp4"/>
 
     </video>
     
