@@ -27,29 +27,25 @@ app.get('/init', (req,res)   => {
     
         console.log('Bucket created')
     
-        // const  files = ["0.mp4","1.mp4","2.mp4","4.mp4"]
+        const  files = ["0.mp4","1.mp4","2.mp4","3.mp4"]
     
-        // files.forEach(async (path) => {
-        //     console.log(`creating stream ${path}`),
-        //     await fs.createReadStream(path).
-        //     pipe(await bucket.openUploadStream(path, {
-        //         chunkSizeBytes: 1048576
-        //     }))
-        
-    
-        // }
-
-       
-        const videoUploadStream = bucket.openUploadStream('stream');
-        const videoReadStream = fs.createReadStream('./0.mp4');
-        
-        videoReadStream.pipe(videoUploadStream);
-        
-
+        files.forEach(async (path) => {
+            console.log(`creating stream ${path}`),
+            await fs.createReadStream(path).
+            pipe(await bucket.openUploadStream(path, {
+                chunkSizeBytes: 1048576
+            }))
         
     
+        
+        
+        },
+        
+        
         res.status(200).send("Done...")
         
+        )
+    
         
         
     
@@ -118,7 +114,7 @@ app.get('/video/:id/play', (req,res) => {
         const bucket = new mongodb.GridFSBucket(db);
         
        
-        const downloadStream = bucket.openDownloadStreamByName('stream', {
+        const downloadStream = bucket.openDownloadStreamByName(`${req.params.id}.mp4`, {
           start
         });
     
