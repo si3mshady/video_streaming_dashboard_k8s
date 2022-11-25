@@ -12,7 +12,6 @@ const port = 8080;
 app.get('/init', (req,res)   => {
 
 
-
     mongodb.MongoClient.connect(url, function (error, client) {
 
         if (error) {
@@ -35,9 +34,7 @@ app.get('/init', (req,res)   => {
             pipe(await bucket.openUploadStream(path, {
                 chunkSizeBytes: 1048576
             }))
-        
     
-        
         
         },
         
@@ -135,25 +132,10 @@ app.get('/video/:id/play', (req,res) => {
         })
     
 
-
-
-    
-
-
-
-
-
-
-
-
     })
 
 
   
-    
-
-
-
 
 
   })
