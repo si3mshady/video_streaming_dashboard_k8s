@@ -3,22 +3,13 @@ import styled from 'styled-components'
 import Donut from '../components/Donut'
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
-// import Video1 from "/Users/elliottarnold/streaming_dash/streaming-dash/src/components/assets/1.mp4" 
-// import Video2 from "/Users/elliottarnold/streaming_dash/streaming-dash/src/components/assets/2.mp4" 
-// import Video3 from "/Users/elliottarnold/streaming_dash/streaming-dash/src/components/assets/3.mp4" 
-// import Video4 from "/Users/elliottarnold/streaming_dash/streaming-dash/src/components/assets/4.mp4" 
-
 
 import {ClickContext} from "../App"
 
-// axios
-
-// const video_imports = [Video1, Video2, Video3, Video4] 
 
 const VID = ({setter, getter, content, id }) => (
 <div className='video'>
      <video  onPlay={() => {setter( getter + 1 )}}     controls height="100%"  muted  width="100%">
-    {/* <source src={content} type="video/mp4"/> */}
     <source src={`http://localhost:4000/video/${id}/play`} type="video/mp4"/>
 
     </video>
@@ -41,7 +32,6 @@ export default function Media() {
         getter={countList[index]} 
         setter={setList[index]}
         id={index}
-        // content={video_imports[index]} 
         />))  }
    </Div>
     
@@ -76,14 +66,21 @@ ${'' /* width: 500px; */}
 }
 
 
-@media (max-width: 1000px) {
+@media (max-width: 1223px) {
+  ${'' /* z-index: - 10; */}
+  overflow-y: scroll;
 margin: auto;
   display: grid;
+  margin-top: 10vh;
 grid-template-columns: repeat(1,1fr);
 .video {
+  ${'' /* background-color: #003047 !important; */}
+  background-color: orange;
+
   margin: auto;
-  height: 50vh !important;
-      width: 100vw !important;
+  ${'' /* height: 50vh !important; */}
+      height: 50vh !important;
+      width: 100% !important;
 }
   }
 

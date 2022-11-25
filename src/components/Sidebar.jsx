@@ -78,7 +78,7 @@ const Section = styled.section`
 border-top: 1px solid black;
 border-right: 1px solid orange;
 transition: 0.5s;
-width: 14.8vw;
+width: 16.8vw;
 height: 100vh;
 z-index: 20;
 position: fixed;
@@ -183,8 +183,9 @@ background-color: #003047 !important;
 
 
 
-@media (max-width: 1000px) {
- 
+@media (max-width: 1223px) {
+  width: 0vw;
+height: 0vh;
   display: none;
   }
 

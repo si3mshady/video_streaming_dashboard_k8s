@@ -89,23 +89,28 @@ background-color: #003047 !important;
 }
 
 
-@media (max-width: 1000px) {
-  ${'' /* background-color: orange !important;
-  display: grid;
-  grid-template-columns: 100% 1fr; */}
- 
-  ${'' /* display: grid;
-  height: 100vh; */}
-  ${'' /* width: 100%; */}
+@media (max-width: 1223px) {
+
+  width: 100%;
+  min-width: 617px;
+${'' /* height: 100vh; */}
+
+
 display: flex;
 flex-direction: column;
 
+align-items: center;
+
   .dashboard_container  {
-   
-  display: grid;
-  margin-top: 200px;
-  height: 100vh;
-  overflow-y: scroll;
+    min-width: 617px;
+    ${'' /* padding: 100px; */}
+
+
+margin: auto;
+align-items: center;
+
+
+  overflow-y: scroll; 
 
 
 

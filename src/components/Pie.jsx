@@ -86,7 +86,7 @@ const Div = styled.div`
         height: 50%;
     }
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1223px) {
  
  display: none;
  }

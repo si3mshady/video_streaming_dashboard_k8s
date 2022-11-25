@@ -22,7 +22,7 @@ export default function Topbar() {
 }
 
 const Nav = styled.nav`
-
+z-index: 999999;
 display: flex;
 justify-content: space-between;
 background-color: #003047 !important;
@@ -85,6 +85,17 @@ ${'' /* z-index: 3; */}
     
     
 }
+
+@media (max-width: 1223px) {
+ 
+        display: none;
+        ${'' /* background-color: red; */}
+        
+    
+
+
+}
+
 
 `
 
