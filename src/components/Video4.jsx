@@ -2,8 +2,16 @@ import React from 'react'
 import styled from 'styled-components';
 import Topbar from './Topbar'
 // import Video from "/Users/elliottarnold/streaming_dash/streaming-dash/src/components/assets/4.mp4" 
+import {ClickContext} from "../App"
+
 
 export default function Video4() {
+
+    
+ const value = React.useContext(ClickContext)
+ const { videoCount4,  setVideoCount4} = value 
+
+  
   return (
     <>
     <Topbar />
@@ -11,7 +19,7 @@ export default function Video4() {
     
     <Section >
     <div className='vid-container'>
-         <video controls height="100%" autoPlay muted  width="100%">
+         <video onPlay={() => {setVideoCount4( videoCount4 + 1 )}}   controls height="100%" autoPlay muted  width="100%">
 
          <source src={"http://localhost:8080/video/3/play"} type="video/mp4"/>
 
