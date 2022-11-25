@@ -1,0 +1,17 @@
+version: '3.1'
+services:
+
+  streamdb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    container_name: streamdb
+    volumes:
+      - mongo-data:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=example
+    
+
+volumes:
+  mongo-data:

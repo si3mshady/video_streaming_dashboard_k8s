@@ -87,8 +87,9 @@ ${'' /* z-index: 3; */}
 }
 
 @media (max-width: 1223px) {
- 
+ text-align: center;
         display: none;
+        margin: auto;
         ${'' /* background-color: red; */}
         
     
