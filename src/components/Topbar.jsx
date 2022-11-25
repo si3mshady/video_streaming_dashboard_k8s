@@ -91,9 +91,6 @@ ${'' /* z-index: 3; */}
         display: none;
         margin: auto;
         ${'' /* background-color: red; */}
-        
-    
-
 
 }
 

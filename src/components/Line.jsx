@@ -77,7 +77,7 @@ export function Line_() {
     const {videoCount1, videoCount2, videoCount3 , videoCount4} = value 
 
 
-    const labels = ['Videp Plays'];
+    const labels = ['Video Plays'];
 
      const data = {
       labels,

@@ -26,9 +26,8 @@ app.get('/init', (req,res)   => {
     
         console.log('Bucket created')
     
-        const  files = ["0.mp4","1.mp4","2.mp4","3.mp4"]
     
-        files.forEach(async (path) => {
+        ["0.mp4","1.mp4","2.mp4","3.mp4"].forEach(async (path) => {
             console.log(`creating stream ${path}`),
             await fs.createReadStream(path).
             pipe(await bucket.openUploadStream(path, {
