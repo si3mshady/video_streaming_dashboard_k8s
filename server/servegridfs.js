@@ -1,56 +1,62 @@
 const express = require("express");
-const app = express();
+
 const fs = require("fs");
 const mongodb = require('mongodb');
-// const url = 'mongodb://root:example@streamdb:27017';
-const url = 'mongodb://root:example@localhost:27017?authSource=admin'
-
+const cors = require('cors');
+const { setTimeout } = require("timers");
+const app = express();
+//  const url = process.env.MONGO_CONNECTION_URL
+ const url = "mongodb://elgenesis:block@streamdb:27017"
+// const url = 'mongodb://root:example@localhost:27017?authSource=admin'
+app.use(cors())
 
 const port = 8080;
+setTimeout(() => {
 
+  mongodb.MongoClient.connect(url, function (error, client) {
 
-app.get('/init', (req,res)   => {
-
-
-    mongodb.MongoClient.connect(url, function (error, client) {
-
-        if (error) {
-            console.log(error)
-           
-        }
-    
-    
-        const db = client.db('streamshady2');
+    if (error) {
+        console.log(error)
        
-        const bucket = new mongodb.GridFSBucket(db);
-    
-        console.log('Bucket created')
-    
-    
-        ["0.mp4","1.mp4","2.mp4","3.mp4"].forEach(async (path) => {
-            console.log(`creating stream ${path}`),
-            await fs.createReadStream(path).
-            pipe(await bucket.openUploadStream(path, {
-                chunkSizeBytes: 1048576
-            }))
-    
-        
-        },
-        
-        
-        res.status(200).send("Done...")
-        
-        )
-    
-        
+    }
+
+    ["0.mp4","1.mp4","2.mp4","3.mp4","4.mp4"].forEach(async (path) => {
+
+       setTimeout(async () => {
+
+        const db = client.db('streamshady2');
+        console.log('Connected to database')
+         const bucket = new mongodb.GridFSBucket(db);
+     
+         console.log('Bucket created')
+
+         await fs.createReadStream(path).
+                     pipe(await bucket.openUploadStream(path, {
+                         chunkSizeBytes: 1048576
+                     }))
+     
+
+       }, 4000)
+
+
+
     })
-}) 
+
+    
+})
 
 
+}, 11000)
 
 
+app.get('/test', (req,res) => {
+  res.status(200).send("test sucessful");
+
+})
 
 app.get('/video/:id/play', (req,res) => {
+
+  console.log('video play request')
 
     mongodb.MongoClient.connect(url, function (error, client) {
 
@@ -77,7 +83,7 @@ app.get('/video/:id/play', (req,res) => {
             console.log('There is a video')
           }
 
-          const videoPath = `assets/${req.params.id}.mp4`
+          const videoPath = `${req.params.id}.mp4`
           console.log(videoPath)
       
           // get size of video 
@@ -98,7 +104,7 @@ app.get('/video/:id/play', (req,res) => {
               "Content-Range": `bytes ${start}-${end}/${videoSize}`,
               "Accept-Ranges": "bytes",
               "Content-Length": contentLength,
-              "Content-Type": "video/mp4"
+              "Content-Type": "video/mp4", 'Acess-Control-Allow-Origin':'*'
           }
       
           res.writeHead(206,headers); //tells browswer that partial data is being sent
@@ -113,18 +119,6 @@ app.get('/video/:id/play', (req,res) => {
         });
     
         downloadStream.pipe(res);
-
-
-
-
-
-
-
-
-
-
-
-
 
         })
     

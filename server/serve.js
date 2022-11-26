@@ -98,7 +98,8 @@ app.get('/video/:id/play', (req,res) => {
         "Content-Range": `bytes ${start}-${end}/${videoSize}`,
         "Accept-Ranges": "bytes",
         "Content-Length": contentLength,
-        "Content-Type": "video/mp4"
+        "Content-Type": "video/mp4",
+        'Acess-Control-Allow-Origin':'*'
     }
 
     res.writeHead(206,headers); //tells browswer that partial data is being sent

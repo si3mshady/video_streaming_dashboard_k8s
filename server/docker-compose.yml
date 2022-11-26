@@ -1,17 +1,47 @@
 version: '3.1'
 services:
 
+  digitaldash:
+    image:  node:16
+    command: "npm start"
+    ports:
+      - "3000:3000"
+    working_dir: /digitaldash
+    container_name: digitaldash
+    volumes:
+      - /Users/elliottarnold/streaming_dash/streaming-dash:/digitaldash
+    environment:
+    - REACT_APP_NODE_URL=localhost:8080
+
+    depends_on:
+    - streamdb
+
+  streamserver: 
+    image:  node:16
+    ports:
+      - "8080:8080"
+    command: node servegridfs.js
+    working_dir: /streamserver
+    container_name: streamserver
+    volumes:
+      - ./:/streamserver
+    environment:
+    - MONGO_CONNECTION_URL=mongodb://elgenesis:block@streamdb:27017
+
+    depends_on:
+      - streamdb
+
   streamdb:
     image: mongo:latest
     ports:
       - "27017:27017"
     container_name: streamdb
     volumes:
-      - mongo-data:/data/db
+      - mongodata:/data/db
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=root
-      - MONGO_INITDB_ROOT_PASSWORD=example
+      - MONGO_INITDB_ROOT_USERNAME=elgenesis
+      - MONGO_INITDB_ROOT_PASSWORD=block
     
 
 volumes:
-  mongo-data:
+  mongodata:
