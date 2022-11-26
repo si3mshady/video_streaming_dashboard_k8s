@@ -3,7 +3,7 @@ import './App.css';
 
 import {Link, Router,Route, Routes} from 'react-router-dom'
 
-import { useState } from 'react';
+import { useStat, useEffect } from 'react';
 
 import Sidebar from "./components/Sidebar"
 import styled from 'styled-components';
@@ -13,9 +13,13 @@ import Video2 from './components/Video2';
 import Video3 from './components/Video3';
 import Video4 from './components/Video4';
 import React from 'react';
+import axios from 'axios'
+
 
 export const ClickContext = React.createContext()
 function App() {
+
+   
   const [videoCount1, setVideoCount1] = React.useState(0)
   const [videoCount2, setVideoCount2] = React.useState(0)
   const [videoCount3, setVideoCount3] = React.useState(0)

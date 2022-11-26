@@ -18,7 +18,7 @@ export default function Video3() {
     <div className='vid-container'>
          <video onPlay={() => {setVideoCount3( videoCount3 + 1 )}}  controls height="100%" autoPlay muted width="100%">
 
-         <source src={"http://localhost:8080/video/2/play"} type="video/mp4"/>
+         <source src={"http://localhost:8080/video/3/play"} type="video/mp4"/>
 
         </video>
     </div>

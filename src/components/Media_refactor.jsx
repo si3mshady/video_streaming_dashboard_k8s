@@ -6,11 +6,13 @@ import { Doughnut } from 'react-chartjs-2';
 
 import {ClickContext} from "../App"
 
+console.log(process.env.REACT_APP_MONGO_URL_BASE)
 
 const VID = ({setter, getter, content, id }) => (
 <div className='video'>
      <video  onPlay={() => {setter( getter + 1 )}}     controls height="100%"  muted  width="100%">
-    <source src={`http://localhost:8080/video/${id}/play`} type="video/mp4"/>
+     {/* <source src={`http://${process.env.REACT_APP_NODE_URL}/video/${id}/play`} type="video/mp4"/> */}
+     <source src={`http://localhost:8080/video/${id}/play`} type="video/mp4"/>
 
     </video>
     
