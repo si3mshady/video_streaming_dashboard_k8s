@@ -31,7 +31,7 @@ test()
     <div className='vid-container'>
          <video onPlay={() => {setVideoCount2( videoCount2 + 1 )}}  controls height="100%" autoPlay muted width="100%">
 
-         <source src={"http://localhost:8080/video/2/play"} type="video/mp4"/>
+         <source src={`${process.env.REACT_APP_NODE_URI_BASE}/video/1/play`} type="video/mp4"/>
 
         </video>
     </div>
