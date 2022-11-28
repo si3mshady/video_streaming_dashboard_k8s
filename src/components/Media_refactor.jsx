@@ -6,7 +6,6 @@ import { Doughnut } from 'react-chartjs-2';
 
 import {ClickContext} from "../App"
 
-console.log(process.env.REACT_APP_MONGO_URL_BASE)
 
 const VID = ({setter, getter, content, id }) => (
 <div className='video'>
